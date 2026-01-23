@@ -58,7 +58,7 @@ Machine-learning techniques are applied selectively to support interpretation ra
 This project is not deployed as a web application. Analysis outputs are presented via Jupyter notebooks and an external Power BI dashboard.
 
 **Power BI Dashboard:**  
-ADD FINAL LINK HERE
+[https://app.powerbi.com/links/vQE4IbjzOA ](https://app.powerbi.com/links/vQE4IbjzOA)
 
 The Power BI dashboard is additionally supplied as a `.pbix` file in the GitHub folder `PowerBI` for transparency and reproducibility.
 
@@ -175,18 +175,34 @@ Four distinct fire–biodiversity risk clusters were identified, representing pr
 
 ---
 
-## Dashboard Design
+### Dashboard Design
 
-The final dashboard prioritises clarity and accessibility for non-technical users. Statistical analysis is embedded within intuitive visuals and summary metrics rather than exposed as technical outputs.
+The final Power BI dashboard is designed to communicate complex fire–biodiversity risk patterns clearly and intuitively for non-technical stakeholders. Analytical depth is embedded within visual summaries and interactive filters, while detailed modelling logic is documented separately in the supporting notebooks.
 
-The dashboard presents:
+The dashboard is structured across four thematic pages, each addressing a distinct decision-making need:
 
-- five-year fire exposure patterns using aggregated counts and average intensity metrics  
-- spatial fire–biodiversity hotspot maps derived from grid-based overlays  
-- identification of priority geographic corridors based on comparative fire density and persistence  
-- simple, interpretable summary statistics to support conservation prioritisation  
+## Overview – European Fire Exposure (2020–2025)
 
-Detailed modelling techniques are intentionally excluded from the dashboard interface and documented fully within the supporting notebooks.
+The overview page provides a high-level summary of fire activity across Europe over a five-year period. Key performance indicators display total fire detections, average annual fire counts, and average fire intensity (FRP). Seasonal fire patterns are visualised using a standardised October–September “fire year” to enable consistent comparison across years. This page establishes temporal context and highlights broad trends before spatial detail is introduced.
+
+## Hotspots – Fire Activity and Threatened Species Exposure
+
+This page focuses on the spatial intersection of fire activity and biodiversity vulnerability. Aggregated fire detections are mapped alongside threatened species exposure, allowing users to explore where repeated fire activity overlaps with species classified as Vulnerable (VU), Endangered (EN), or Critically Endangered (CR). Interactive filters enable users to examine individual or combined threat categories, supporting comparative spatial analysis across Europe.
+
+## Risk Levels – Cluster-Defined Priority Zones
+
+The risk levels page translates modelling outputs into clear, action-oriented geographic priorities. Cluster-defined zones group areas with similar fire persistence and threatened-species exposure profiles. These zones are labelled from Priority 1 (immediate intervention) through to background monitoring areas, allowing users to quickly identify locations where conservation action or enhanced monitoring may be most urgent.
+
+## Priority 1 Species – Critically Endangered Exposure
+
+The final page narrows focus to Critically Endangered species occurring within Priority 1 zones. Summary bars provide an at-a-glance comparison of threatened-species categories within the highest-risk areas, while a supporting table lists individual species records contributing to this exposure. This page is intended to support conservation triage by highlighting where immediate fire risk coincides with the most vulnerable species.
+
+Across all pages, the dashboard prioritises:
+- aggregated five-year fire exposure metrics rather than raw detection-level data
+- spatial visualisations that emphasise patterns over precision
+- simple, interpretable summaries aligned with real-world conservation decision-making
+
+Detailed statistical modelling, clustering methodology, and data preparation steps are intentionally excluded from the dashboard interface and are documented fully within the accompanying Python notebooks.
 
 ---
 
