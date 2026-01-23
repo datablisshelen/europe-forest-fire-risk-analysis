@@ -1,82 +1,8 @@
-<<<<<<< HEAD
-# ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
-
-## Template Instructions
-
-Welcome,
-
-This is the Code Institute student template for the Data Analytics capstone project. We have preinstalled all of the tools you need to get started. It's perfectly okay to use this template as the basis for your project submissions. Click the `Use this template` button above to get started.
-
-You can safely delete the Template Instructions section of this README.md file and modify the remaining paragraphs for your own project. Please do read the Template Instructions at least once, though! It contains some important information about the IDE and the extensions we use.
-
-## How to use this repo
-
-1. Use this template to create your GitHub project repo. Click the **Use this template** button, then click **Create a new repository**.
-
-1. Copy the URL of your repository to your clipboard.
-
-1. In VS Code, select **File** -> **Open Folder**.
-
-1. Select your `vscode-projects` folder, then click the **Select Folder** button on Windows, or the **Open** button on Mac.
-
-1. From the top menu in VS Code, select **Terminal** > **New Terminal** to open the terminal.
-
-1. In the terminal, type `git clone` followed by the URL of your GitHub repository. Then hit **Enter**. This command will download all the files in your GitHub repository into your vscode-projects folder.
-
-1. In VS Code, select **File** > **Open Folder** again.
-
-1. This time, navigate to and select the folder for the project you just downloaded. Then, click **Select Folder**.
-
-1. A virtual environment is necessary when working with Python projects to ensure each project's dependencies are kept separate from each other. You need to create your virtual environment, also called a venv, and then ensure that it is activated any time you return to your workspace.
-Click the gear icon in the lower left-hand corner of the screen to open the Manage menu and select **Command Palette** to open the VS Code command palette.
-
-1. In the command palette, type: *create environment* and select **Python: Create Environment…**
-
-1. Choose **Venv** from the dropdown list.
-
-1. Choose the Python version you installed earlier. Currently, we recommend Python 3.12.8
-
-1. **DO NOT** click the box next to `requirements.txt`, as you need to do more steps before you can install your dependencies. Click **OK**.
-
-1. You will see a `.venv` folder appear in the file explorer pane to show that the virtual environment has been created.
-
-1. **Important**: Note that the `.venv` folder is in the `.gitignore` file so that Git won't track it.
-
-1. Return to the terminal by clicking on the TERMINAL tab, or click on the **Terminal** menu and choose **New Terminal** if no terminal is currently open.
-
-1. In the terminal, use the command below to install your dependencies. This may take several minutes.
-
- ```console
- pip3 install -r requirements.txt
- ```
-
-1. Open the `jupyter_notebooks` directory, and click on the notebook you want to open.
-
-1. Click the **kernel** button and choose **Python Environments**.
-
-Note that the kernel says `Python 3.12.8` as it inherits from the venv, so it will be Python-3.12.8 if that is what is installed on your PC. To confirm this, you can use the command below in a notebook code cell.
-
-```console
-! python --version
-```
-
-## Deployment Reminders
-
-* Set the `.python-version` Python version to a [Heroku-22](https://devcenter.heroku.com/articles/python-support#supported-runtimes) stack currently supported version that closest matches what you used in this project.
-* The project can be deployed to Heroku using the following steps.
-
-1. Log in to Heroku and create an App
-2. At the **Deploy** tab, select **GitHub** as the deployment method.
-3. Select your repository name and click **Search**. Once it is found, click **Connect**.
-4. Select the branch you want to deploy, then click **Deploy Branch**.
-5. The deployment process should happen smoothly if all deployment files are fully functional. Click the button **Open App** at the top of the page to access your App.
-6. If the slug size is too large, then add large files not required for the app to the `.slugignore` file.
-=======
 # Capstone Project: European Fire and Threatened Species Risk Analysis
 
 ## Environmental Challenge
 
-Fire events are increasing in frequency and intensity across Europe, placing growing pressure on ecosystems, protected habitats, and species of conservation concern. Environmental agencies require clear, evidence-based insight into where fire exposure and ecological vulnerability intersect in order to prioritise monitoring, prevention, and conservation action.
+Fire activity is increasing in frequency and intensity across Europe, placing growing pressure on ecosystems, protected habitats, and species of conservation concern. Environmental agencies require clear, evidence-based insight into where fire exposure and ecological vulnerability intersect in order to prioritise monitoring, prevention, and conservation action.
 
 ---
 
@@ -88,11 +14,11 @@ To develop a data-driven spatial risk framework that identifies regions where fi
 
 ## Intended Audience
 
-European environmental protection and conservation agencies responsible for:
+This project is intended for European environmental protection and conservation agencies responsible for:
 
-- Fire preparedness and land management  
-- Biodiversity protection and monitoring  
-- Regional conservation prioritisation and policy planning  
+- fire preparedness and land management  
+- biodiversity protection and monitoring  
+- regional conservation prioritisation and policy planning  
 
 The dashboard and README are designed for non-technical stakeholders, while the supporting notebooks provide full technical transparency.
 
@@ -100,38 +26,41 @@ The dashboard and README are designed for non-technical stakeholders, while the 
 
 ## Project Solution
 
-This project analyses five years of NASA FIRMS satellite fire detections across Europe alongside threatened-species occurrence data from GBIF.
+This project analyses five years of NASA FIRMS satellite fire detections across Europe alongside threatened-species occurrence data sourced from GBIF.
 
-Due to the scale of the datasets involved, a grid-based spatial overlay approach is used to aggregate fire exposure and threatened-species presence into consistent spatial units. Rather than relying on memory-intensive polygon intersections, fire detections and biodiversity occurrences are aggregated to regular latitude–longitude grid cells. This enables efficient identification of fire–biodiversity hotspot regions while retaining sufficient spatial resolution for continental-scale risk analysis.
+Due to the scale of the datasets involved, a grid-based spatial aggregation approach is used to combine fire exposure and biodiversity presence into consistent spatial units. Rather than relying on computationally intensive polygon intersections, fire detections and biodiversity occurrences are aggregated into regular latitude–longitude grid cells.
 
-Unsupervised machine-learning techniques (PCA and KMeans clustering) are applied to group grid cells into distinct fire–threatened-species risk typologies. These typologies are translated into conservation-oriented priority levels, enabling actionable interpretation rather than abstract statistical outputs.
+This approach enables efficient identification of fire–biodiversity hotspot regions while retaining sufficient spatial resolution for continental-scale risk analysis.
+
+Machine-learning techniques are applied selectively to support interpretation rather than operational prediction, ensuring the modelling component complements the spatial risk narrative without obscuring it.
 
 ---
 
-## Key Statistical & Data Analysis Methods Used
+## Key Statistical and Data Analysis Methods Used
 
 - Descriptive statistics (counts, averages, distributions)  
-- Temporal aggregation (daily → monthly → yearly trends)  
-- Spatial analysis (bounding box filtering, grid-based binning)  
-- Data quality considerations (satellite confidence levels, detection limits)  
-- Grid-based spatial aggregation  
-- Unsupervised clustering (PCA + KMeans) for risk typology discovery  
-- Static and interactive visualisation (Matplotlib, Seaborn, Plotly, Power BI)
-
-Machine-learning methods are used to support exploratory risk profiling rather than operational fire prediction.
+- Temporal aggregation (daily → monthly / yearly trends)  
+- Spatial analysis (bounding box filtering, grid-based aggregation)  
+- Data quality considerations (confidence levels, satellite limitations)  
+- Correlation versus causation assessment  
 
 ---
 
 ## Project Outputs
 
-- A reproducible Python analytics pipeline for data acquisition, cleaning, spatial aggregation, and modelling  
-- A grid-level fire–threatened-species risk table identifying hotspot regions  
-- A clustering model defining four distinct fire–threatened-species risk typologies  
+- A reproducible Python analytics pipeline demonstrating data acquisition, cleaning, spatial aggregation, and modelling  
+- A grid-level fire–biodiversity risk table identifying hotspot regions  
 - An interactive Power BI dashboard presenting:
   - fire exposure patterns  
   - threatened-species hotspot regions  
-  - priority geographic zones for conservation attention  
-  - species-level listings of the most threatened taxa in highest-priority zones  
+  - priority geographic corridors for conservation attention  
+
+This project is not deployed as a web application. Analysis outputs are presented via Jupyter notebooks and an external Power BI dashboard.
+
+**Power BI Dashboard:**  
+ADD FINAL LINK HERE
+
+The Power BI dashboard is additionally supplied as a `.pbix` file in the GitHub folder `PowerBI` for transparency and reproducibility.
 
 ---
 
@@ -145,28 +74,212 @@ Each record represents a satellite-detected fire point.
 
 Key attributes include:
 
-- latitude, longitude — detection coordinates  
-- acq_date, acq_time — detection timestamp  
-- confidence — detection confidence classification  
-- frp — Fire Radiative Power (proxy for fire intensity)  
-- daynight — day/night detection flag  
+- `latitude`, `longitude` – detection coordinates  
+- `acq_date`, `acq_time` – detection timestamp  
+- `confidence` – detection confidence classification  
+- `frp` – Fire Radiative Power (proxy for fire intensity)  
+- `daynight` – day/night detection flag  
 
 ---
 
 ### 2. Threatened Species Occurrence Data
 
-Threatened-species occurrence records are retrieved from the GBIF API, filtered to:
+Threatened-species occurrence records are retrieved from the GBIF API and filtered to:
 
 - European geographic extent  
-- Critically Endangered (CR)  
-- Endangered (EN)  
-- Vulnerable (VU)  
+- IUCN threat categories: Critically Endangered (CR), Endangered (EN), and Vulnerable (VU)  
 
-Occurrence data is aggregated to grid cells to derive:
+These records provide a spatial representation of biodiversity vulnerability for integration with fire exposure. Occurrence data is aggregated to grid cells to derive:
 
 - total threatened-species records  
-- CR / EN / VU category counts  
+- CR / EN / VU category presence  
 - multi-category risk indicators  
 
-Additionally, GBIF occurrence records are linked back to priority grid cells within Power BI to provide species-level drill-down tables for Priority-1 zones, allowing conservation agencies to vi
->>>>>>> 7324b29 (Initial commit - capstone project structure and notebooks)
+---
+
+### 3. Protected Areas (Contextual Layer)
+
+A European protected-area spatial dataset is retained as contextual information to support interpretation of hotspot regions.
+
+Due to dataset scale and performance constraints, protected areas are not used as the primary spatial aggregation unit. Instead, hotspot grid cells provide a scalable means of identifying candidate regions where protected-area exposure may warrant further investigation.
+
+---
+
+## Data Extraction and Processing
+
+### Code Evaluation and Improvement
+
+The initial data extraction and processing approach focused on validating access to the NASA FIRMS API and confirming that fire detection data could be retrieved successfully for the study region. While effective for testing, this early approach had limitations when scaled to multi-year analysis.
+
+### Initial Approach and Limitations
+
+- API requests were structured for short time periods and not optimised for large-scale extraction  
+- Configuration values were embedded directly within code, reducing reusability  
+- Limited handling of partial failures or empty API responses  
+- Outputs were not compressed, increasing storage requirements  
+
+### Improvements Implemented
+
+- Introduction of a configuration-driven extraction approach  
+- Multi-day windowed downloads to support stable API extraction across five years  
+- Automated handling of empty or failed API responses  
+- Gzip-compressed CSV outputs to reduce storage overhead  
+
+### Outcome
+
+These improvements resulted in a more reliable, maintainable, and scalable data pipeline suitable for repeated execution and downstream analysis.
+
+---
+
+## Analytical Questions Addressed
+
+- How does fire activity vary across Europe over a five-year period?  
+- Are fire detections spatially clustered rather than evenly distributed?  
+- Where do fire exposure and threatened biodiversity co-occur?  
+- Do fire–biodiversity hotspots represent isolated species risk or compounded conservation risk?  
+- Which geographic corridors show disproportionately high fire–biodiversity overlap?  
+
+---
+
+## Analysis Techniques Used
+
+- Data cleaning and temporal standardisation  
+- Feature engineering (seasonality, spatial binning, biodiversity indicators)  
+- Single-variable and multi-variable exploratory analysis  
+- Grid-based spatial aggregation  
+- Unsupervised clustering (KMeans) to profile fire–biodiversity risk patterns  
+- Static and interactive visualisation (Matplotlib, Seaborn, Plotly)  
+
+Machine-learning techniques are used to support exploratory risk profiling rather than operational prediction.
+
+---
+
+## Key Analytical Findings
+
+### Exploratory Analysis
+
+- Fire–biodiversity risk is spatially concentrated rather than evenly distributed across Europe  
+- Distinct longitudinal corridors, notably 0–10°E and a corridor near ~38°E, show over-representation of hotspot grid cells  
+- Approximately two-thirds of hotspot grid cells contain multiple threatened categories (CR, EN, VU), indicating compounded conservation risk  
+- Several hotspot regions combine moderate fire exposure with high biodiversity vulnerability, highlighting areas where relatively small increases in fire pressure may have disproportionate ecological impact  
+
+### Cluster Modelling: Method and Rationale
+
+Unsupervised clustering (KMeans) was applied to grid-level fire and biodiversity indicators to identify distinct risk profiles without imposing predefined thresholds.
+
+Clustering supports comparative risk interpretation by grouping grid cells with similar fire exposure and biodiversity characteristics, enabling prioritisation based on relative rather than absolute risk.
+
+### Cluster Modelling: Findings
+
+Four distinct fire–biodiversity risk clusters were identified, representing progressively increasing combinations of fire frequency, fire intensity, and threatened-species presence. These clusters form the basis for prioritisation tiers used within the dashboard.
+
+---
+
+## Dashboard Design
+
+The final dashboard prioritises clarity and accessibility for non-technical users. Statistical analysis is embedded within intuitive visuals and summary metrics rather than exposed as technical outputs.
+
+The dashboard presents:
+
+- five-year fire exposure patterns using aggregated counts and average intensity metrics  
+- spatial fire–biodiversity hotspot maps derived from grid-based overlays  
+- identification of priority geographic corridors based on comparative fire density and persistence  
+- simple, interpretable summary statistics to support conservation prioritisation  
+
+Detailed modelling techniques are intentionally excluded from the dashboard interface and documented fully within the supporting notebooks.
+
+---
+
+## Actionable Insights
+
+The dashboard translates analytical findings into four prioritisation groups:
+
+- **Priority 1:** Highest combined fire exposure and biodiversity vulnerability  
+- **Priority 2:** High biodiversity vulnerability with moderate fire exposure  
+- **Priority 3:** High fire exposure with lower biodiversity vulnerability  
+- **Priority 4:** Lower relative risk across both dimensions  
+
+These groupings enable focused conservation attention and resource allocation.
+
+---
+
+## Ethical Considerations
+
+- All datasets are publicly available and contain no personal data  
+- Satellite fire detections may include false positives or missed events  
+- Biodiversity occurrence data may be spatially biased toward surveyed regions  
+- Outputs are intended for educational and analytical purposes, not operational emergency response  
+- Interpretations remain within the limits of available data  
+
+---
+
+## Tools and Libraries
+
+- Python  
+- Pandas, NumPy  
+- Matplotlib, Seaborn, Plotly  
+- GeoPandas, Shapely, PyProj, Rtree  
+- Scikit-learn, Feature-engine, Imbalanced-learn, XGBoost  
+- YData Profiling, PPSCore  
+- Requests  
+- Jupyter Notebook  
+- Power BI  
+
+---
+
+## Notebook–README Alignment
+
+| Notebook | Purpose | README Section |
+|--------|--------|---------------|
+| Notebook 01 | Data acquisition | Dataset Content |
+| Notebook 02 | Cleaning and feature engineering | Analysis Techniques |
+| Notebook 03 | Exploratory analysis | Analytical Questions |
+| Notebook 04 | Modelling (clustering) | Key Analytical Findings |
+| Notebook 05 | Spatial hotspot analysis | Key Findings |
+| Dashboard | Visual communication | Dashboard Design |
+
+---
+
+## Limitations
+
+- Satellite detections may be affected by cloud cover, sensor resolution, and orbital timing  
+- Fire confidence values are categorical rather than probabilistic  
+- The five-year analysis window does not capture longer-term climate variability  
+- Bounding-box spatial filtering introduces minor spatial generalisation  
+- Near-real-time fire data is treated as unverified and excluded from modelling  
+
+GBIF-provided IUCN categories reflect the status recorded at the time of data indexing and may not always match the most recent Red List classification.
+
+---
+
+## Future Work
+
+- Extend analysis to longer historical time series  
+- Integrate meteorological variables to support predictive modelling  
+- Refine spatial resolution through alternative grid or hex-based aggregation  
+- Validate results against ground-reported fire datasets  
+- Expand dashboard to support scenario-based conservation planning  
+- Implement monitored live-data pipelines with quality checks  
+- Integrate direct IUCN API validation for updated threat classifications  
+
+---
+
+## Credits
+
+- Code Institute course materials  
+- Python library official documentation  
+- VS Code Copilot  
+- ChatGPT  
+- Power BI Copilot  
+
+---
+
+## Acknowledgements
+
+This project was completed as part of the Code Institute Data Analytics programme.
+
+---
+
+## Reflections
+
+This project reinforced the importance of scalable spatial analysis techniques when working with continental-scale environmental datasets. The use of grid-based aggregation and interpretable clustering enabled meaningful conservation insights while maintaining analytical transparency and reproducibility.
