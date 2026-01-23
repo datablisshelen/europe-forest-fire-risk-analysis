@@ -34,6 +34,11 @@ core.python*
 >>>>>>> 7324b29 (Initial commit - capstone project structure and notebooks)
 data/raw/*
 data/processed/*
+!data/processed/
+!data/processed/*.csv
+!data/processed/*.csv.gz
+!data/processed/*.geojson
+
 !data/raw/.gitkeep
 !data/processed/.gitkeep
 <<<<<<< HEAD
