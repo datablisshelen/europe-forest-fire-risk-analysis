@@ -31,17 +31,20 @@ core.python*
 !notebooks/*.ipynb
 
 # Data folders
->>>>>>> 7324b29 (Initial commit - capstone project structure and notebooks)
 data/raw/*
 data/processed/*
+
+# Allow processed datasets for reproducibility
 !data/processed/
 !data/processed/*.csv
 !data/processed/*.csv.gz
 !data/processed/*.geojson
 
+# Keep empty directories
 !data/raw/.gitkeep
 !data/processed/.gitkeep
-<<<<<<< HEAD
+
+
 
 # -------------------------------------------------
 # Output files (figures / tables)
