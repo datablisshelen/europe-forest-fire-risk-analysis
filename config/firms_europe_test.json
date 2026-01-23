@@ -1,0 +1,11 @@
+{
+  "api_base_url": "https://firms2.modaps.eosdis.nasa.gov/api/area/csv",
+  "api_key": "REMOVED_FOR_PRIVACY BEFORE SUBMITTING CAPSTONE PROJECT",
+  "source": "VIIRS_SNPP_SP",
+  "area": "-11,34,31,72",
+  "day_range": 5,
+  "start_date": "2024-07-01",
+  "end_date": "2024-07-15",
+  "output_raw_csv_gz": "data/raw/test_europe_firms_july2024.csv.gz",
+  "output_daily_calendar_csv": "data/processed/test_fire_calendar_july2024.csv"
+}

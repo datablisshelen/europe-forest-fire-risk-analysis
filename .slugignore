@@ -1,2 +1,23 @@
 jupyter_notebooks/*
+<<<<<<< HEAD
 README.md
+=======
+
+data/raw/*
+data/processed/*
+
+outputs/*
+assets/images/*
+
+.env
+config/*key*
+config/*token*
+
+node_modules/
+
+.vscode/
+.ipynb_checkpoints/
+
+*.pbix
+*.pbi*
+>>>>>>> 7324b29 (Initial commit - capstone project structure and notebooks)

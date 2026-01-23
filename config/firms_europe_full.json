@@ -1,0 +1,10 @@
+{
+  "api_base_url": "https://firms2.modaps.eosdis.nasa.gov/api/area/csv",
+  "api_key": "REMOVED_FOR_PRIVACY BEFORE SUBMITTING CAPSTONE PROJECT",
+  "source": "VIIRS_SNPP_SP",
+  "area": "-31.5,34,40.5,72",
+  "day_range": 5,
+  "start_date": "2020-10-01",
+  "end_date": "2025-09-30",
+  "output_raw_csv_gz": "europe_firms_viirs_snpp_sp_2020_2025.csv.gz"
+}

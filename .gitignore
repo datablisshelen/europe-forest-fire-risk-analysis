@@ -1,12 +1,17 @@
+<<<<<<< HEAD
 # -------------------------------------------------
 # Python / Environment
 # -------------------------------------------------
+=======
+# Python / Environment
+>>>>>>> 7324b29 (Initial commit - capstone project structure and notebooks)
 __pycache__/
 *.py[cod]
 .venv/
 env.py
 core.python*
 
+<<<<<<< HEAD
 # -------------------------------------------------
 # Jupyter
 # -------------------------------------------------
@@ -15,10 +20,23 @@ core.python*
 # -------------------------------------------------
 # Data folders
 # -------------------------------------------------
+=======
+# Jupyter
+.ipynb_checkpoints/
+
+# Ignore all notebooks by default
+*.ipynb
+
+# Track only capstone notebooks
+!notebooks/*.ipynb
+
+# Data folders
+>>>>>>> 7324b29 (Initial commit - capstone project structure and notebooks)
 data/raw/*
 data/processed/*
 !data/raw/.gitkeep
 !data/processed/.gitkeep
+<<<<<<< HEAD
 
 # -------------------------------------------------
 # Output files (figures / tables)
@@ -35,11 +53,25 @@ outputs/*
 # -------------------------------------------------
 # API keys / secrets
 # -------------------------------------------------
+=======
+desktop.ini
+
+# Output files (figures / tables)
+outputs/*
+!outputs/.gitkeep
+
+# Power BI temporary files
+*.pbi*
+*.pbix.lock
+
+# API keys / secrets
+>>>>>>> 7324b29 (Initial commit - capstone project structure and notebooks)
 config/*key*
 config/*token*
 kaggle.json
 cloudinary_python.txt
 
+<<<<<<< HEAD
 # -------------------------------------------------
 # Node / frontend 
 # -------------------------------------------------
@@ -59,5 +91,18 @@ Thumbs.db
 # -------------------------------------------------
 # Misc course requirements from template
 # -------------------------------------------------
+=======
+# Node / frontend
+node_modules/
+
+# GitHub system folder
+.github/
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Misc course requirements from template
+>>>>>>> 7324b29 (Initial commit - capstone project structure and notebooks)
 core.Microsoft*
 core.mongo*
