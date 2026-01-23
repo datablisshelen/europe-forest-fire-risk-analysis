@@ -55,7 +55,7 @@ Machine-learning techniques are applied selectively to support interpretation ra
   - threatened-species hotspot regions  
   - priority geographic corridors for conservation attention  
 
-This project is not deployed as a web application. Analysis outputs are presented via Jupyter notebooks and an external Power BI dashboard.
+This project is not deployed as a standalone web application; analytical outputs are presented via Jupyter notebooks and an external Power BI dashboard.
 
 **Power BI Dashboard:**  
 [https://app.powerbi.com/links/vQE4IbjzOA ](https://app.powerbi.com/links/vQE4IbjzOA)
@@ -218,6 +218,12 @@ The dashboard translates analytical findings into four prioritisation groups:
 These groupings enable focused conservation attention and resource allocation.
 
 ---
+## Use of AI in Project Development
+
+AI tools were used as a development and productivity aid throughout the project. This included support with planning the analytical workflow, drafting and refining Python code, troubleshooting errors, and improving clarity and consistency in documentation and dashboard narratives.
+
+All analytical decisions, data preparation steps, clustering logic, and interpretation of results were carried out by me. AI outputs were reviewed, adapted, and validated to ensure accuracy, reproducibility, and alignment with the project objectives.
+
 
 ## Ethical Considerations
 
@@ -235,7 +241,7 @@ These groupings enable focused conservation attention and resource allocation.
 - Pandas, NumPy  
 - Matplotlib, Seaborn, Plotly  
 - GeoPandas, Shapely, PyProj, Rtree  
-- Scikit-learn, Feature-engine, Imbalanced-learn, XGBoost  
+- Scikit-learn, Feature-engine 
 - YData Profiling, PPSCore  
 - Requests  
 - Jupyter Notebook  
@@ -250,8 +256,10 @@ These groupings enable focused conservation attention and resource allocation.
 | Notebook 01 | Data acquisition | Dataset Content |
 | Notebook 02 | Cleaning and feature engineering | Analysis Techniques |
 | Notebook 03 | Exploratory analysis | Analytical Questions |
-| Notebook 04 | Modelling (clustering) | Key Analytical Findings |
-| Notebook 05 | Spatial hotspot analysis | Key Findings |
+| Notebook 04 | Threatened species spatial preparation | Dataset Content |
+| Notebook 05 | Spatial hotspot analysis | Key Analytical Findings |
+| Notebook 06 | Risk clustering and profiling | Key Analytical Findings |
+
 | Dashboard | Visual communication | Dashboard Design |
 
 ---
@@ -282,11 +290,11 @@ GBIF-provided IUCN categories reflect the status recorded at the time of data in
 
 ## Credits
 
-- Code Institute course materials  
-- Python library official documentation  
-- VS Code Copilot  
-- ChatGPT  
-- Power BI Copilot  
+- Code Institute course materials
+- Python library official documentation across all libraries used
+- VS Code Copilot for code writing support and error handling
+- ChatGPT for project management support
+- Power BI Copilot for dashboard feature support
 
 ---
 
@@ -298,4 +306,4 @@ This project was completed as part of the Code Institute Data Analytics programm
 
 ## Reflections
 
-This project reinforced the importance of scalable spatial analysis techniques when working with continental-scale environmental datasets. The use of grid-based aggregation and interpretable clustering enabled meaningful conservation insights while maintaining analytical transparency and reproducibility.
+This project reinforced the importance of scalable spatial analysis techniques when working with continental-scale environmental datasets. The use of grid-based aggregation and interpretable clustering enabled meaningful conservation insights while maintaining analytical transparency and reproducibility. This was my first map-based project and there was a steep learning curve that will support me in future map-based work. 
